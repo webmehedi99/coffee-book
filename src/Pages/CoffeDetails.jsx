@@ -39,14 +39,21 @@ const CoffeeDetails = () => {
             <div className='my-6'>
                 <div>
                     <div>
-                       <h1 className='text-2xl md:text-3xl font-thin'>Ingredients:</h1>
-                       <ul className='list-disc ml-12 mt-6'>
-                         {
-                           ingredients && ingredients.map((ingredient, index) => <li className='text-xl ' key={index}  >{ingredient}</li>) 
-                         }
-                       </ul>
+                        <h1 className='text-2xl md:text-3xl font-thin'>Ingredients:</h1>
+                        <ul className='list-disc ml-12 mt-6'>
+                            {
+                                ingredients && ingredients.map((ingredient, index) => <li className='text-xl ' key={index}  >{ingredient}</li>)
+                            }
+                        </ul>
                     </div>
                     <div>
+                        <h1 className='text-2xl md:text-3xl font-thin mt-12'>Nutrition:</h1>
+                        <ul className='list-disc ml-12 mt-6'>
+                            <li className='text-xl'>Calories : {nutrition_info.calories} </li>
+                            <li className='text-xl'>Fat : {nutrition_info.fat}</li>
+                            <li className='text-xl'>Carbohydrates : {nutrition_info.carbohydrates}</li>
+                            <li className='text-xl'>Protein : {nutrition_info.protein}</li>
+                        </ul>
 
                     </div>
                 </div>
