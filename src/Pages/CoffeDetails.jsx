@@ -1,3 +1,4 @@
+import { list } from 'postcss';
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 
@@ -32,8 +33,27 @@ const CoffeeDetails = () => {
                 </div>
             </div>
             <div className='my-6'>
-                  <h1 className='text-2xl md:text-3xl font-thin'>Making Process :</h1>
-                  <p className='text-base '>{making_process}</p>
+                <h1 className='text-2xl md:text-3xl font-thin'>Making Process :</h1>
+                <p className='text-base mt-2'>{making_process}</p>
+            </div>
+            <div className='my-6'>
+                <div>
+                    <div>
+                       <h1 className='text-2xl md:text-3xl font-thin'>Ingredients:</h1>
+                       <ul className='list-disc ml-12 mt-6'>
+                         {
+                           ingredients && ingredients.map((ingredient, index) => <li className='text-xl ' key={index}  >{ingredient}</li>) 
+                         }
+                       </ul>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div>
+
+                </div>
+
             </div>
         </div>
     );
