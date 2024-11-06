@@ -1,6 +1,7 @@
 import { list } from 'postcss';
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import nutritionImage from '../assets/nutrition.png'
 
 const CoffeeDetails = () => {
     const { id } = useParams();
@@ -36,7 +37,7 @@ const CoffeeDetails = () => {
                 <h1 className='text-2xl md:text-3xl font-thin'>Making Process :</h1>
                 <p className='text-base mt-2'>{making_process}</p>
             </div>
-            <div className='my-6'>
+            <div className='flex justify-between items-center my-6'>
                 <div>
                     <div>
                         <h1 className='text-2xl md:text-3xl font-thin'>Ingredients:</h1>
@@ -61,7 +62,7 @@ const CoffeeDetails = () => {
                     </div>
                 </div>
                 <div>
-
+                   <img className='w-full h-100 md:h-[500px]' src={nutritionImage} alt="" />
                 </div>
 
             </div>
