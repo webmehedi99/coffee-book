@@ -49,12 +49,15 @@ const CoffeeDetails = () => {
                     <div>
                         <h1 className='text-2xl md:text-3xl font-thin mt-12'>Nutrition:</h1>
                         <ul className='list-disc ml-12 mt-6'>
-                            <li className='text-xl'>Calories : {nutrition_info.calories} </li>
-                            <li className='text-xl'>Fat : {nutrition_info.fat}</li>
-                            <li className='text-xl'>Carbohydrates : {nutrition_info.carbohydrates}</li>
-                            <li className='text-xl'>Protein : {nutrition_info.protein}</li>
+                            {nutrition_info && (
+                                <>
+                                    <li className='text-xl'>Calories: {nutrition_info.calories}</li>
+                                    <li className='text-xl'>Fat: {nutrition_info.fat}</li>
+                                    <li className='text-xl'>Carbohydrates: {nutrition_info.carbohydrates}</li>
+                                    <li className='text-xl'>Protein: {nutrition_info.protein}</li>
+                                </>
+                            )}
                         </ul>
-
                     </div>
                 </div>
                 <div>
